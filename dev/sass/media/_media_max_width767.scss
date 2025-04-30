@@ -1,3 +1,149 @@
 @media screen and (max-width: 767px) {
-
+    .weekly {
+        .container{
+            .swiper-weekly {
+            max-width: 200px;
+            }
+        }
+    }
+    .collection {
+        padding: 77px 0 169px 0;
+        .container {
+            padding-right: 29px;
+            padding-left: 29px;
+            margin-right: 20px;
+            .collection-title {
+                text-align: center;
+                color: #141416;
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 40px;
+            }
+            .table-body-adaptivy {
+                max-height: 300px;
+                overflow: hidden;
+                position: relative;
+                .collection-user {
+                    width: 100%;
+                    border-collapse: collapse;
+                    .table-header {
+                        .table-header__columns-names {
+                            .table-header__column-name {
+                                color: #93989A;
+                                font-size: 14px;
+                                font-weight: 500;
+                                padding: 0 0 20px 0;
+                                &:nth-child(2) {
+                                    text-align: end;
+                                }
+                                .head_hour, .head_floor_price, .head_owners, .head_items{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    .table-body {
+                        counter-reset: test;
+                        .table-body__columns-datas {
+                            border-bottom: 2px solid #EBE9E9;
+                            position: relative;
+                            .table-body__data {
+                                padding: 0 0 0 0;
+                                font-size: 15px;
+                                .floor_price, .owners, .items, .hours{
+                                    display: none;
+                                }
+                                .mobile {
+                                    display: flex;
+                                    position: absolute;
+                                    font-size: 13px;
+                                    top: 8px;
+                                }
+                                .swiper-icon-data{
+                                    justify-content: end;
+                                }
+                                .table-body__content {
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 18px 0 15px 0;
+                                    .icon-collection {
+                                        width: 45px;
+                                        height: 45px;
+                                        margin-right: 22px;
+                                        position: relative;
+                                        img {
+                                            border-radius: 100%;
+                                            border: 2px solid #fff;
+                                        }
+                                        &:before {
+                                            content: counter(test);
+                                            counter-increment: test;
+                                            position:absolute;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            font-size: 12px;
+                                            font-weight: 700;
+                                            width: 21px;
+                                            height: 21px;
+                                            right: -3px;
+                                            bottom: -3px;
+                                            border-radius: 10px;
+                                            background-color: #fff;
+                                        }
+                                        
+                                    }
+                                    .table-body__title {
+                                        color: #141416;
+                                        font-size: 15px;
+                                        font-weight: 500;
+                                        margin-bottom: 5px;
+                                    }
+                                    .table-body__title-bid {
+                                        color: #64748B;
+                                        font-size: 13px;
+                                        font-weight: 400;
+                                    }
+                                }
+                                .table-users-list__data {
+                                    padding: 18px 0 15px 0;
+                                    .table-list__price {
+                                        font-size: 15px;
+                                        font-weight: 600;
+                                        margin-bottom: 8px;
+                                        display: flex;
+                                        justify-content: end;
+                                    }
+                                    .table-list__swiper-title-procent{
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                    }
+                                }
+                                .swiper-icon-data {
+                                    margin-bottom: 21px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .expant-btn {
+                justify-content: center;
+                margin-top: 41px;
+                .expant {
+                    display: flex;
+                    background-color: transparent;
+                    border: 0;
+                    color: #ACADB9;
+                    font-size: 12px;
+                    cursor: pointer;
+                    margin-right: 12px;
+                }
+                .icon-arrow-forward {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
 }

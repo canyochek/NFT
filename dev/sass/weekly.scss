@@ -1,0 +1,99 @@
+$weekly-container: 1566px + 24px;
+.weekly {
+    position: relative;
+    background-color: #F1F1F1;
+    padding: 70px 0 274px 0;
+    .container {
+        max-width: $weekly-container;
+        overflow: hidden;
+        .paragraph {
+            color: #C5C5C5;
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 100px;
+        }
+        .swiper-weekly {
+            position: relative;
+            max-width: 923px;
+            width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: visible;
+            .swiper-wrapper-weekly {
+                display: flex;
+                .swiper-slide-weekly {
+                    min-width: 281px;
+                    padding-top: 0px;
+                    .swiper-content {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #fff;
+                        border-radius: 24px;
+                        padding: 14px 14px 14px 14px;
+
+                        .swiper-photo {
+                            img{
+                                border-radius: 24px;
+                            }
+                        }
+
+                        .swiper-title {
+                            font-size: 21px;
+                            color: #141416;
+                            font-weight: 600;
+                            margin: 19px 0 14px 0;
+                        }
+            
+                        .swiper-title-bid {
+                            font-size: 14px;
+                            color: #94A3B8;
+                            font-weight: 400;
+                            margin-bottom: 5px;
+                        }
+                        .swiper-icon-bid {
+                            display: flex;
+                            margin-bottom: 7px;
+                            line-height: 20px;
+                            i{
+                                margin-right: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .weekly-slider-navigation {
+            @include slider-navigation;
+            position: absolute;
+            margin-left: 0;
+            margin-top: 0;
+            left: 50%;
+            transform: translate(-50%, 0) ;
+            bottom: 64px;
+            margin: 0 auto;
+
+            .weekly-button-prev, .weekly-button-next {
+                @include button-prev-next;
+            }
+
+            .weekly-button-prev {
+                @include button-prev;
+            }
+            
+            .weekly-button-next  {
+                @include button-next;
+                margin-left: 50px;
+            }
+        }
+        @include recent-viewed(absolute, 100px, $bottom: -118px); 
+    }
+}
+
+
+
+
+
+
+
+
