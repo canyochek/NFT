@@ -11,10 +11,6 @@ const toggleMobileNav =()=> {
 
 btnBurger.addEventListener('click', toggleMobileNav)
 
-
-
-
-
 const bannerSlider = new Swiper('.swiper', {
   slidesPerView: 2,
   speed: 700,
@@ -134,19 +130,18 @@ function closeAllWiget() {
 closeAllWiget();
 
 
-const btnExplore = document.querySelector('.expant'); 
-const tableBody = document.querySelector('.table-body-adaptivy');
 
-btnExplore.addEventListener('click', function(){
-    tableBody.classList.toggle('full');
-    let element = document.getElementById("expbtn");
-    if (element.textContent === "Close") {
-      element.textContent = "Explore All";
-    } else {
-      element.textContent = "Close";
-  }
+document.querySelectorAll('.expant').forEach(button => {
+    button.addEventListener('click', function() {
+        const targetSelector = this.dataset.target;
+        const targetElement = document.querySelector(targetSelector);
+        
+        targetElement.classList.toggle('full');
+        this.textContent = targetElement.classList.contains('full') 
+            ? 'Close' 
+            : 'Explore All';
+    });
 });
 
-
-
+ 
 

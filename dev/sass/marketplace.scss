@@ -44,6 +44,12 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 40px;
+            max-height: 920px;
+            overflow: hidden;
+            &.full {
+                max-height: 100%;
+                overflow: visible;
+            }
             .card {
                 display: flex;
                 flex-direction: column;
@@ -76,7 +82,7 @@
                     margin-top: 5px;
                 }
             }
-            
+        }
         }
         @include button-explore; 
         span {
@@ -87,4 +93,3 @@
             background-color:#CBCBCB;
         }
     }
-}
